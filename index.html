@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chitral Fish Farm | Fresh, Live &amp; Roasted Fish in Chitral</title>
+<meta name="description" content="Fresh fish, live fish and roasted fish from our own farm in Chitral. Family seating area and home delivery in Chitral. Call or WhatsApp to order.">
+<meta name="keywords" content="fresh fish Chitral, roasted fish Chitral, fish farm Chitral, fish delivery Chitral">
+<meta property="og:title" content="Chitral Fish Farm">
+<meta property="og:description" content="Fresh, live and roasted fish. Family seating and delivery in Chitral.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d3b45; --river:#14707c; --glacier:#e9f4f2; --foam:#f7fbfa;
+  --ember:#e2552b; --ember-d:#c4411b; --gold:#f2b84b; --text:#1d3a40;
+  --head:'Fredoka','Noto Nastaliq Urdu',system-ui,sans-serif;
+  --body:'Nunito','Noto Nastaliq Urdu',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);background:var(--foam);line-height:1.65;font-size:1.05rem}
+body.ur{font-family:'Noto Nastaliq Urdu',var(--body);line-height:2.1}
+h1,h2,h3{font-family:var(--head);line-height:1.15;color:var(--ink)}
+h2{font-size:clamp(1.8rem,4.5vw,2.6rem);margin-bottom:.6rem}
+body.ur h1,body.ur h2,body.ur h3{line-height:1.7}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0}
+.lead{max-width:60ch;margin-bottom:2rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-family:var(--head);font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--ember);color:#fff}.btn-wa:hover{background:var(--ember-d)}
+.btn-line{border-color:#fff;color:#fff}.btn-line:hover{background:rgba(255,255,255,.15)}
+.btn-dark{background:var(--ink);color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(13,59,69,.96);backdrop-filter:blur(6px);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+.logo{font-family:var(--head);font-weight:700;font-size:1.3rem;text-decoration:none}
+nav{display:flex;gap:1.4rem;align-items:center}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{color:var(--gold)}
+.lang{background:transparent;border:2px solid var(--gold);color:var(--gold);border-radius:999px;padding:.2rem .9rem;font:600 .95rem var(--head);cursor:pointer}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#0d3b45 0%,#14707c 100%);color:#fff;padding:5rem 0 0;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.hero h1{color:#fff;font-size:clamp(2.4rem,7vw,4.6rem);max-width:14ch}
+.hero p{font-size:1.2rem;max-width:44ch;margin:1.2rem 0 2rem;color:#d8eeee}
+.hero .btns{display:flex;flex-wrap:wrap;gap:.8rem;padding-bottom:6rem;position:relative;z-index:2}
+.hero .fish{position:absolute;right:4%;top:18%;font-size:clamp(5rem,16vw,11rem);opacity:.18;transform:rotate(-12deg);user-select:none}
+.mount{position:absolute;bottom:0;left:0;width:100%;height:150px;display:block}
+
+/* why */
+.why{background:var(--foam);padding-top:3rem}
+.why ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem}
+.why li{font-size:1rem}
+.why b{display:block;font-family:var(--head);font-size:1.25rem;color:var(--ink);margin:.2rem 0}
+.why span{font-size:2rem}
+
+/* services */
+.svc{background:var(--glacier)}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.panel{border-radius:28px 28px 28px 8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.panel:nth-child(2){border-radius:28px 8px 28px 28px}
+.photo{height:190px;display:grid;place-items:center;font-size:4.5rem;background:linear-gradient(135deg,var(--river),var(--ink));background-size:cover;background-position:center}
+.panel:nth-child(2) .photo{background-color:#2a8d99}
+.panel:nth-child(3) .photo{background:linear-gradient(135deg,#f08a3c,var(--ember-d));background-size:cover;background-position:center}
+.panel div.in{padding:1.4rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.panel .btn{align-self:flex-start;margin-top:auto;padding:.6rem 1.2rem;font-size:.98rem}
+.note{margin-top:1.5rem;font-weight:600;color:var(--river)}
+
+/* family */
+.fam{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.fam .photo{height:380px;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,#f2b84b,#e2552b);font-size:6rem}
+.fam ul{margin:1rem 0 0;padding-inline-start:1.2rem}
+.fam li{margin:.3rem 0}
+
+/* delivery */
+.del{background:var(--ink);color:#d8eeee}
+.del h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin:2rem 0;counter-reset:s}
+.steps div{border-inline-start:4px solid var(--gold);padding:.2rem 0 .2rem 1rem;counter-increment:s}
+.steps div::before{content:counter(s);display:block;font:700 2rem var(--head);color:var(--gold)}
+.steps b{color:#fff;font-family:var(--head);font-size:1.15rem}
+.del .btns{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.info p{margin:.5rem 0}
+form{display:grid;gap:.8rem}
+input,textarea{width:100%;padding:.85rem 1rem;border:2px solid #c9dedd;border-radius:14px;font:inherit;background:#fff}
+input:focus,textarea:focus{border-color:var(--river);outline:none}
+.map{margin-top:1.2rem;border-radius:18px;overflow:hidden;border:0;width:100%;height:230px;background:var(--glacier);display:grid;place-items:center;text-align:center;padding:1rem;font-weight:600}
+
+footer{background:#082a31;color:#a9c9cb;padding:2rem 0;text-align:center;font-size:.95rem}
+
+.float{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3);text-decoration:none;font-size:1.9rem}
+
+/* one entrance moment */
+.hero h1,.hero p,.hero .btns{animation:rise .8s both}
+.hero p{animation-delay:.12s}.hero .btns{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+[dir=rtl] .fish{right:auto;left:4%}
+@media (max-width:760px){
+  .burger{display:block}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);flex-direction:column;padding:1.2rem;gap:1rem;align-items:flex-start}
+  nav.open{display:flex}
+  .fam,.contact{grid-template-columns:1fr}
+  .fam .photo{height:260px}
+  section{padding:3.2rem 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">🐟 <span data-bind="name"></span></a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav id="nav" onclick="this.classList.remove('open')">
+      <a href="#fish" data-en="Our Fish" data-ur="ہماری مچھلی">Our Fish</a>
+      <a href="#family" data-en="Family Area" data-ur="فیملی ایریا">Family Area</a>
+      <a href="#delivery" data-en="Delivery" data-ur="ڈیلیوری">Delivery</a>
+      <a href="#contact" data-en="Contact" data-ur="رابطہ">Contact</a>
+      <button class="lang" id="langBtn" type="button">اردو</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero" id="hero">
+  <div class="fish" aria-hidden="true">🐟</div>
+  <div class="wrap">
+    <h1 data-en="Fresh from our pond to your plate" data-ur="ہمارے تالاب سے سیدھا آپ کی پلیٹ تک">Fresh from our pond to your plate</h1>
+    <p data-en="Fresh, live and roasted fish from our own farm in Chitral. Come sit with your family, or call us and we’ll bring it to your door." data-ur="چترال میں ہمارے اپنے فارم کی تازہ، زندہ اور روسٹ مچھلی۔ فیملی کے ساتھ آئیں، یا کال کریں، ہم گھر پہنچا دیں گے۔">Fresh, live and roasted fish from our own farm in Chitral. Come sit with your family, or call us and we’ll bring it to your door.</p>
+    <div class="btns">
+      <a class="btn btn-wa wa" data-msg="Assalam o Alaikum! I would like to order fish." data-en="Order on WhatsApp" data-ur="واٹس ایپ پر آرڈر کریں">Order on WhatsApp</a>
+      <a class="btn btn-line tel" data-en="Call now" data-ur="ابھی کال کریں">Call now</a>
+    </div>
+  </div>
+  <svg class="mount" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 150V95L130 30l90 55 120-70 140 90 110-60 150 70 130-80 190 90 140-50v100z" fill="#0d3b45" opacity=".35"/>
+    <path d="M0 150V120c100-20 200 20 300 0s200-20 300 0 200 20 300 0 200-20 300 0v30z" fill="#f7fbfa"/>
+  </svg>
+</div>
+
+<section class="why">
+  <div class="wrap">
+    <ul>
+      <li><span>🌊</span><b data-en="Fresh every day" data-ur="روزانہ تازہ">Fresh every day</b><span style="font-size:1rem" data-en="Taken from our own ponds, never old stock." data-ur="ہمارے اپنے تالابوں سے، پرانا نہیں۔">Taken from our own ponds, never old stock.</span></li>
+      <li><span>🐠</span><b data-en="Live fish" data-ur="زندہ مچھلی">Live fish</b><span style="font-size:1rem" data-en="Pick your fish yourself." data-ur="اپنی پسند کی مچھلی خود چنیں۔">Pick your fish yourself.</span></li>
+      <li><span>🔥</span><b data-en="Roasted to order" data-ur="آرڈر پر روسٹ">Roasted to order</b><span style="font-size:1rem" data-en="Cooked hot when you ask." data-ur="آپ کے کہنے پر گرم تیار۔">Cooked hot when you ask.</span></li>
+      <li><span>👨‍👩‍👧</span><b data-en="Family friendly" data-ur="فیملی کے لیے">Family friendly</b><span style="font-size:1rem" data-en="A calm, clean seating area." data-ur="پرسکون اور صاف جگہ۔">A calm, clean seating area.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="svc" id="fish">
+  <div class="wrap">
+    <h2 data-en="What we offer" data-ur="ہم کیا پیش کرتے ہیں">What we offer</h2>
+    <p class="lead" data-en="Three ways to enjoy our fish. Ask us for today’s price." data-ur="ہماری مچھلی کھانے کے تین طریقے۔ آج کا ریٹ ہم سے پوچھیں۔">Three ways to enjoy our fish. Ask us for today’s price.</p>
+    <div class="panels">
+      <article class="panel">
+        <div class="photo" data-img="fresh" role="img" aria-label="Fresh fish">🐟</div>
+        <div class="in">
+          <h3 data-en="Fresh fish" data-ur="تازہ مچھلی">Fresh fish</h3>
+          <p data-en="Cleaned and ready to cook. Buy by the kilo and take it home." data-ur="صاف اور پکانے کے لیے تیار۔ کلو کے حساب سے گھر لے جائیں۔">Cleaned and ready to cook. Buy by the kilo and take it home.</p>
+          <a class="btn btn-dark wa" data-msg="Assalam o Alaikum! What is today’s price for fresh fish?" data-en="Ask the price" data-ur="ریٹ پوچھیں">Ask the price</a>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="photo" data-img="live" role="img" aria-label="Live fish">🐠</div>
+        <div class="in">
+          <h3 data-en="Live fish" data-ur="زندہ مچھلی">Live fish</h3>
+          <p data-en="Choose a live fish from our pond and keep it as fresh as it gets." data-ur="ہمارے تالاب سے زندہ مچھلی خود چنیں، اس سے تازہ کیا ہو گی۔">Choose a live fish from our pond and keep it as fresh as it gets.</p>
+          <a class="btn btn-dark wa" data-msg="Assalam o Alaikum! Do you have live fish available today?" data-en="Ask availability" data-ur="دستیابی پوچھیں">Ask availability</a>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="photo" data-img="roast" role="img" aria-label="Roasted fish">🔥</div>
+        <div class="in">
+          <h3 data-en="Roasted fish" data-ur="روسٹ مچھلی">Roasted fish</h3>
+          <p data-en="Roasted hot over the fire with our spices. Eat here or take it away." data-ur="آگ پر مصالحے کے ساتھ گرم روسٹ۔ یہیں کھائیں یا ساتھ لے جائیں۔">Roasted hot over the fire with our spices. Eat here or take it away.</p>
+          <a class="btn btn-dark wa" data-msg="Assalam o Alaikum! I would like to order roasted fish." data-en="Order roasted fish" data-ur="روسٹ مچھلی آرڈر کریں">Order roasted fish</a>
+        </div>
+      </article>
+    </div>
+    <p class="note" data-en="Prices change daily. Please contact us for today’s rate." data-ur="ریٹ روزانہ بدلتے ہیں۔ آج کے ریٹ کے لیے رابطہ کریں۔">Prices change daily. Please contact us for today’s rate.</p>
+  </div>
+</section>
+
+<section id="family">
+  <div class="wrap fam">
+    <div>
+      <h2 data-en="A place for the whole family" data-ur="پورے خاندان کے لیے ایک جگہ">A place for the whole family</h2>
+      <p data-en="Bring your family and sit down to a hot roasted fish meal in a quiet, clean spot by our ponds. No rush, just good food and good company." data-ur="اپنی فیملی کو لائیں اور ہمارے تالابوں کے پاس پرسکون اور صاف جگہ پر گرم روسٹ مچھلی کھائیں۔ جلدی کوئی نہیں، بس اچھا کھانا اور اچھا ساتھ۔">Bring your family and sit down to a hot roasted fish meal in a quiet, clean spot by our ponds. No rush, just good food and good company.</p>
+      <ul>
+        <li data-en="Separate family seating" data-ur="فیملی کے لیے الگ نشستیں">Separate family seating</li>
+        <li data-en="Clean and peaceful" data-ur="صاف اور پرسکون">Clean and peaceful</li>
+        <li data-en="Fish cooked fresh while you wait" data-ur="آپ کے سامنے تازہ تیار">Fish cooked fresh while you wait</li>
+        <li data-en="Comfortable for children" data-ur="بچوں کے لیے آرام دہ">Comfortable for children</li>
+      </ul>
+    </div>
+    <div class="photo" data-img="family" role="img" aria-label="Family seating area">🍽️</div>
+  </div>
+</section>
+
+<section class="del" id="delivery">
+  <div class="wrap">
+    <h2 data-en="Delivery in Chitral" data-ur="چترال میں ڈیلیوری">Delivery in Chitral</h2>
+    <p class="lead" data-en="We deliver fresh and roasted fish to homes in Chitral. To order delivery, please contact us by phone or WhatsApp." data-ur="ہم چترال میں گھروں تک تازہ اور روسٹ مچھلی پہنچاتے ہیں۔ ڈیلیوری کے لیے فون یا واٹس ایپ پر رابطہ کریں۔">We deliver fresh and roasted fish to homes in Chitral. To order delivery, please contact us by phone or WhatsApp.</p>
+    <div class="steps">
+      <div><b data-en="Contact us" data-ur="رابطہ کریں">Contact us</b><br><span data-en="Call or send a WhatsApp message." data-ur="کال کریں یا واٹس ایپ پیغام بھیجیں۔">Call or send a WhatsApp message.</span></div>
+      <div><b data-en="Tell us what you want" data-ur="اپنا آرڈر بتائیں">Tell us what you want</b><br><span data-en="Fresh, live or roasted, and how much." data-ur="تازہ، زندہ یا روسٹ، اور کتنی۔">Fresh, live or roasted, and how much.</span></div>
+      <div><b data-en="We bring it to you" data-ur="ہم پہنچا دیتے ہیں">We bring it to you</b><br><span data-en="Delivered to your door in Chitral." data-ur="چترال میں آپ کے دروازے تک۔">Delivered to your door in Chitral.</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-wa wa" data-msg="Assalam o Alaikum! I would like a delivery in Chitral." data-en="Order delivery on WhatsApp" data-ur="واٹس ایپ پر ڈیلیوری آرڈر">Order delivery on WhatsApp</a>
+      <a class="btn btn-line tel" data-en="Call us" data-ur="کال کریں">Call us</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="info">
+      <h2 data-en="Find us" data-ur="ہمیں ڈھونڈیں">Find us</h2>
+      <p>📞 <a class="tel" data-bind="phone"></a></p>
+      <p>📍 <span data-bind="address"></span></p>
+      <p>🕙 <span data-bind="hours"></span></p>
+      <p><a id="fb" href="#" target="_blank" rel="noopener">Facebook</a> · <a id="ig" href="#" target="_blank" rel="noopener">Instagram</a></p>
+      <div class="map" id="map"><a id="mapLink" target="_blank" rel="noopener" data-en="Open our location in Google Maps" data-ur="گوگل میپس میں لوکیشن کھولیں">Open our location in Google Maps</a></div>
+    </div>
+    <div>
+      <h2 data-en="Send us a message" data-ur="ہمیں پیغام بھیجیں">Send us a message</h2>
+      <form id="form">
+        <input id="fn" required placeholder="Your name" data-en-ph="Your name" data-ur-ph="آپ کا نام" aria-label="Your name">
+        <textarea id="fm" rows="4" required placeholder="What would you like to order?" data-en-ph="What would you like to order?" data-ur-ph="آپ کیا آرڈر کرنا چاہتے ہیں؟" aria-label="Message"></textarea>
+        <button class="btn btn-wa" type="submit" data-en="Send on WhatsApp" data-ur="واٹس ایپ پر بھیجیں">Send on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> <span data-bind="name"></span> · Chitral</div></footer>
+<a class="float wa" data-msg="Assalam o Alaikum!" aria-label="WhatsApp">💬</a>
+
+<script>
+/* ============ EDIT YOUR DETAILS HERE (only place you need to change) ============ */
+const CONFIG = {
+  name: "Chitral Fish Farm",            // your farm name
+  phone: "0300-0000000",                // shown on the website
+  whatsapp: "923000000000",             // country code + number, no + or spaces (92 = Pakistan)
+  address: "Your address, Chitral",
+  hours: "10:00 AM – 9:00 PM, every day",
+  mapUrl: "",                           // paste your Google Maps link
+  facebook: "",                         // paste link, or leave empty
+  instagram: "",                        // paste link, or leave empty
+  /* Optional photos: put image files next to this page, e.g. "images/hero.jpg". Leave "" to keep the colour tiles. */
+  images: {
+    hero:   "images/hero-pond-mountains.jpg",
+    fresh:  "images/fresh-fish.jpg",
+    live:   "images/live-fish.jpg",
+    roast:  "images/roasted-fish.jpg",
+    family: "images/family-seating.jpg"
+  }
+};
+/* ================================================================================ */
+
+const $ = s => document.querySelectorAll(s);
+const wa = t => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+
+$('[data-bind]').forEach(e => e.textContent = CONFIG[e.dataset.bind]);
+$('.tel').forEach(a => a.href = 'tel:' + CONFIG.phone.replace(/[^+\d]/g,''));
+$('.wa').forEach(a => { a.href = wa(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; });
+document.title = CONFIG.name + ' | Fresh, Live & Roasted Fish in Chitral';
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const setLink = (id, url) => { const a = document.getElementById(id); url ? a.href = url : a.style.display = 'none'; };
+setLink('fb', CONFIG.facebook); setLink('ig', CONFIG.instagram); setLink('mapLink', CONFIG.mapUrl);
+if (!CONFIG.mapUrl) document.getElementById('map').textContent = 'Add your Google Maps link in CONFIG to show it here.';
+if (!CONFIG.facebook && !CONFIG.instagram) document.getElementById('fb').parentElement.style.display = 'none';
+
+for (const [k, v] of Object.entries(CONFIG.images)) {
+  if (!v) continue;
+  if (k === 'hero') { const h = document.getElementById('hero'); h.style.backgroundImage = `linear-gradient(rgba(13,59,69,.72),rgba(13,59,69,.35)),url(${v})`; }
+  else $(`[data-img="${k}"]`).forEach(e => { e.style.backgroundImage = `url(${v})`; e.textContent = ''; });
+}
+
+document.getElementById('form').addEventListener('submit', e => {
+  e.preventDefault();
+  window.open(wa(`Assalam o Alaikum! I am ${fn.value}. ${fm.value}`), '_blank');
+});
+
+let lang = 'en';
+document.getElementById('langBtn').addEventListener('click', () => {
+  lang = lang === 'en' ? 'ur' : 'en';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ur' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ur', lang === 'ur');
+  $('[data-en]').forEach(e => e.textContent = e.dataset[lang]);
+  $('[data-en-ph]').forEach(e => e.placeholder = e.dataset[lang + 'Ph']);
+  document.getElementById('langBtn').textContent = lang === 'ur' ? 'English' : 'اردو';
+});
+</script>
+</body>
+</html>
